@@ -1,0 +1,163 @@
+@import "tailwindcss";
+
+@font-face {
+    font-family: 'dseg';
+    src: url('../fonts/DSEG7Modern-Regular.ttf');
+}
+
+@font-face{
+  font-family: 'red-hat';
+  src: url('../fonts/RedHatDisplay-VariableFont_wght.ttf');
+}
+
+@font-face {
+  font-family: 'source';
+  src: url('../fonts/SourceCodePro-VariableFont_wght.ttf');
+}
+
+@font-face {
+  font-family: 'doto';
+  src: url('../fonts/Doto-Bold.ttf');
+}
+
+input[type="color"]::-webkit-color-swatch {
+    border-radius: 50%;
+    border: 2px solid #ffffff53;
+  }
+  
+  input[type="color"]::-webkit-color-swatch-wrapper {
+    padding: 0;
+    border-radius: 50%;
+  }
+
+@keyframes appear-right {
+
+  from{
+    opacity: 0;
+    transform: translateX(50px);
+  }
+
+  to{
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes appear-left{
+  from{
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+
+  to{
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes disappear-right {
+
+  from{
+    opacity: 1;
+    transform: translateX(0px);
+  }
+
+  to{
+    opacity: 0;
+    transform: translateX(50px);
+  }
+}
+
+@keyframes disappear-left{
+  from{
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  to{
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+}
+
+@keyframes disappear-top-right {
+  from{
+    opacity: 1;
+    transform: translateX(0) translateY(0);
+  }
+
+  to{
+    opacity: 0;
+    transform: translateX(50px) translateY(-50px);
+  }
+}
+
+@keyframes appear-top-right {
+  from{
+    opacity: 0;
+    transform: translateX(50px) translateY(-50px);
+  }
+
+  to{
+    opacity: 1;
+    transform: translateX(0) translateY(0);
+  }
+}
+
+@keyframes appear-bottom {
+  from{
+    opacity: 0;
+    transform: translateY(50px);
+  }
+
+  to{
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+}
+
+@keyframes disappear-bottom {
+  from{
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  to{
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  
+}
+
+.animate-appear-right{
+  animation: appear-right 0.5s ease forwards;
+}
+
+.animate-appear-left{
+  animation: appear-left 0.5s ease forwards;
+}
+
+.animate-disappear-left{
+  animation: disappear-left 0.2s ease forwards;
+}
+
+.animate-disappear-right{
+  animation: disappear-right 0.2s ease forwards;
+}
+
+.animate-disappear-top-right{
+  animation: disappear-top-right 0.2s ease forwards;
+}
+
+.animate-appear-top-right{
+  animation: appear-top-right 0.2s ease forwards;
+}
+
+.animate-disappear-bottom{
+  animation: disappear-bottom 0.2s ease forwards;
+}
+
+.animate-appear-bottom{
+  animation: appear-bottom 0.2s ease forwards;
+}
