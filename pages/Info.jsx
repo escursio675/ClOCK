@@ -1,25 +1,28 @@
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
 
 function Info() {
   const navigate = useNavigate();
+  const location = useLocation();
+
   const [visitorCount, setVisitorCount] = useState(null);
   const [loading, setLoading] = useState(true);
   const [emailModel, setemailModel] = useState(false);
 
   useEffect(() => {
-    fetch("https://api.countapi.xyz/hit/clock-site.com/visits")
+    const count = location.state?.visitorCount;
+
+    if (count != null) {
+      setVisitorCount(count);
+      setLoading(false);
+    } else {
+      fetch("https://api.counterapi.dev/v2/clock/clock-visitors/")
         .then((res) => res.json())
-        .then((data) => {
-            setVisitorCount(data.value);
-        })
-        .catch(() => {
-            setVisitorCount(null);
-        })
-        .finally(() => {
-            setLoading(false);
-        });
-    }, []);
+        .then((data) => setVisitorCount(data.data.up_count))
+        .catch(() => setVisitorCount(null))
+        .finally(() => setLoading(false));
+    }
+  }, [location.key]);
 
   return (
     <div
@@ -63,7 +66,7 @@ function Info() {
         )}
 
         <div className="flex flex-col items-center justify-center gap-10 pt-30 pb-30">
-          <h1 className="text-5xl">CLOCK</h1>
+          <h1 className="text-5xl">ClOCK</h1>
 
           <h2 className="text-2xl pt-25 pb-10" style={{ fontFamily: "doto" }}>
             Made with &#9825; by escursio
@@ -116,14 +119,13 @@ function Info() {
           </div>
 
           {/* Visitor Counter */}
-          <h2 className="pt-30 text-xl"
-          style={{fontFamily:'doto'}}>
+          <h2 className="pt-30 text-xl" style={{ fontFamily: "doto" }}>
             Number of people without clocks:{" "}
-            {loading 
-                ? "Loading..." 
-                : visitorCount !== null 
-                ? visitorCount 
-                : 0}
+            {loading
+              ? "Loading..."
+              : typeof visitorCount === "number"
+              ? Math.floor(visitorCount / 2)
+              : "Error!"}
           </h2>
         </div>
       </div>

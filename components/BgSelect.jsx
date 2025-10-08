@@ -40,7 +40,7 @@ function BgSelect() {
 
   return (
     <div
-      className="h-screen w-screen flex items-center justify-center pt-20"
+      className="h-screen w-screen flex items-center justify-center pt-40"
       style={{
         backgroundImage: background ? `url(${background})` : "none",
         backgroundColor: background ? "transparent" : "black",

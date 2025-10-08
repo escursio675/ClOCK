@@ -25,7 +25,7 @@ function DigiColor(){
     }, [animationActive]); 
 
     return(
-        <div className="bg-black h-screen w-screen flex justify-center items-center text center">
+        <div className="bg-black h-screen w-screen flex justify-center items-center text center pt-50">
 
             <div className="flex flex-col justify-center items-center gap-15">
                 {

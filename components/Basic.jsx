@@ -22,7 +22,7 @@ function Basic(){
     return(
         <>
             <div
-             className='bg-[#000000] h-screen w-screen flex items-center justify-center'>
+             className='bg-[#000000] h-screen w-screen flex items-center justify-center pt-20'>
                 <div className='flex items-center justify-center flex-col gap-25'>
 
                     {milTime===true && <div className='bg-[#000000]'>
