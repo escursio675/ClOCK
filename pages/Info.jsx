@@ -16,10 +16,13 @@ function Info() {
       setVisitorCount(count);
       setLoading(false);
     } else {
-      fetch("https://api.counterapi.dev/v2/clock/clock-visitors/")
+      fetch("/api/counter")
         .then((res) => res.json())
-        .then((data) => setVisitorCount(data.data.up_count))
-        .catch(() => setVisitorCount(null))
+        .then((data) => setVisitorCount(data.count))
+        .catch((err) => {
+          console.error("Error fetching visitor count:", err);
+          setVisitorCount(null);
+        })
         .finally(() => setLoading(false));
     }
   }, [location.key]);

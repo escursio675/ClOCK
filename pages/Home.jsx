@@ -19,44 +19,38 @@ function Home() {
   useEffect(() => {
     const updateAndFetch = async () => {
       try {
-        await fetch('https://api.counterapi.dev/v2/clock/clock-visitors/up');
-        const response = await fetch('https://api.counterapi.dev/v2/clock/clock-visitors/');
-        const data = await response.json();
-        setData(data.data.up_count);
+        //Vercel serverless function
+        const response = await fetch("/api/visitors");
+        const result = await response.json();
+        setData(result.data.up_count);
       } catch (error) {
-        console.error("Error updating or fetching count:", error);
+        console.error("Error fetching visitor count:", error);
       }
     };
-  
+
     updateAndFetch();
   }, []);
-
 
   const handleNext = () => {
     setIndex((prev) => (prev + 1) % items.length);
     setDirection("next");
   };
 
-
   const handlePrev = () => {
     setIndex((prev) => (prev - 1 + items.length) % items.length);
     setDirection("prev");
   };
 
-  // Keyboard functionality
+  // Keyboard navigation
   useEffect(() => {
     const handleKeyDown = (e) => {
-      if (e.key === "ArrowRight") {
-        handleNext();
-      } else if (e.key === "ArrowLeft") {
-        handlePrev();
-      }
+      if (e.key === "ArrowRight") handleNext();
+      else if (e.key === "ArrowLeft") handlePrev();
     };
 
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, []);
-
 
   const isIdle = usefadeUi();
 
@@ -69,6 +63,7 @@ function Home() {
       >
         More
       </button>
+
       <div
         className="relative h-screen w-screen flex overflow-hidden justify-center 
         items-center gap-6 bg-black text-white"
