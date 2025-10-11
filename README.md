@@ -1,15 +1,15 @@
 # ClOCK
 
 The Official Github repository for the ClOCK web app @ cl-ock.vercel.app made by escursio<br>
-**Find me at**
--LinkedIn(https://www.linkedin.com/in/abhimanyu-saikia)
+**Find me at** <br>
+-LinkedIn(https://www.linkedin.com/in/abhimanyu-saikia) <br>
 -Mail(abhisaikia675@gmail.com)
 
 ## Features of ClOCK
 #### Clock Faces
-**Basic Clock**- Simple, clean, distractionless and quick, with 12 and 24 hour formats
-**Analog Clock**- Essentially the analog version of "Basic Clock"
-**Digi-Colour Clock**-Digital font-face, customizable colour, 12 and 24 hour formats
+**Basic Clock**- Simple, clean, distractionless and quick, with 12 and 24 hour formats <br>
+**Analog Clock**- Essentially the analog version of "Basic Clock" <br>
+**Digi-Colour Clock**-Digital font-face, customizable colour, 12 and 24 hour formats <br>
 **Flip Clock**-Simulates a traditional flip-clock<br>
 <u>Note: </u>The code for the "Flip Clock" is originally from https://codepen.io/liborgabrhel/pen/JyJzjb <br>
 
