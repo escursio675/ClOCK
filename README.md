@@ -13,7 +13,10 @@ The Official Github repository for the ClOCK web app @ cl-ock.vercel.app made by
 **Flip Clock**-Simulates a traditional flip-clock<br>
 <u>Note: </u>The code for the "Flip Clock" is originally from https://codepen.io/liborgabrhel/pen/JyJzjb <br>
 
-**Clock BG**-Choose your own background, invert the clock's digits to black/white, 12 and 24 hour formats
+**Clock BG**-Choose your own background, invert the clock's digits to black/white, 12 and 24 hour formats <br>
+
+#### Counter API
+On the "More" page, CounterAPI is used to provide a simple counter on the total number of home page visits. The API is available at https://counterapi.dev/
 
 ### Licensing Note:
 This project is licensed under the Apache License 2.0. You are free to use, modify, and distribute the code for both commercial and non-commercial purposes, as long as you provide proper attribution to the original author(s).
