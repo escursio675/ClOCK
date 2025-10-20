@@ -41,7 +41,8 @@ function Info() {
       </button>
 
       <div
-        className="h-8/10 w-4/10 bg-[#172840] rounded-xl border-2 border-[#313842] text-[#92a4b1]"
+        className="lg:h-8/10 lg:w-4/10 h-3/4 w-3/4
+         bg-[#172840] rounded-xl border-2 border-[#313842] text-[#92a4b1]"
         style={{ fontFamily: "red-hat" }}
       >
         {emailModel && (
@@ -68,10 +69,11 @@ function Info() {
           </div>
         )}
 
-        <div className="flex flex-col items-center justify-center gap-10 pt-30 pb-30">
+        <div className="flex flex-col items-center justify-center 
+        gap-10 pt-30 pb-30">
           <h1 className="text-5xl">ClOCK</h1>
 
-          <h2 className="text-2xl pt-25 pb-10" style={{ fontFamily: "doto" }}>
+          <h2 className="text-2xl lg:pt-25 lg:pb-10 pl-15 pt-12 pb-5" style={{ fontFamily: "doto" }}>
             Made with &#9825; by escursio
           </h2>
 
@@ -122,7 +124,7 @@ function Info() {
           </div>
 
           {/* Visitor Counter */}
-          <h2 className="pt-30 text-xl" style={{ fontFamily: "doto" }}>
+          <h2 className="lg:pt-30 pt-15 pl-5 lg:pl-0 text-xl" style={{ fontFamily: "doto" }}>
             Number of people without clocks:{" "}
             {loading
               ? "Loading..."

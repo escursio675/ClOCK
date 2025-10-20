@@ -30,7 +30,7 @@ function DigiColor(){
             <div className="flex flex-col justify-center items-center gap-15">
                 {
                     milTime &&
-                    <div className=" text-9xl"
+                    <div className="text-6xl lg:text-9xl"
                     style={{fontFamily:`dseg`, color: color}}>
                         {time.toLocaleTimeString().toUpperCase()}
                     </div>
@@ -38,7 +38,7 @@ function DigiColor(){
 
                 {
                     !milTime &&
-                    <div className="text-9xl"
+                    <div className=" text-6xl lg:text-9xl"
                     style={{fontFamily:`dseg`, color: color}}>
                         {time.toLocaleTimeString([],
                             {hour: "2-digit", minute: "2-digit", second:"2-digit", hour12:true})
@@ -46,11 +46,12 @@ function DigiColor(){
                     </div>
                 }
 
-                <div key={animationKey} className="flex flex-col items-center justify-center gap-12">
+                <div key={animationKey} className="flex flex-col items-center justify-center gap-6
+                 lg:gap-12">
                     
                     <button
                         onClick={()=>setmilTime(!milTime)}
-                        className={`pt-10 text-3xl border-none focus:outline-none
+                        className={`lg:pt-10 pt-2 lg:text-3xl text-2xl border-none focus:outline-none
                                     ${animationActive? "animate-disappear-bottom": "animate-appear-bottom"}`}
                         style={{color: color}}>
                             {milTime? "12 Hour": "24 Hour"}

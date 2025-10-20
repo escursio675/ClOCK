@@ -26,18 +26,18 @@ function Basic(){
                 <div className='flex items-center justify-center flex-col gap-25'>
 
                     {milTime===true && <div className='bg-[#000000]'>
-                    <h1 className='text-[#ffffff] lg: text-9xl'>{time.toLocaleTimeString()}
+                    <h1 className='text-[#ffffff] text-6xl lg:text-9xl '>{time.toLocaleTimeString()}
                     </h1>
                 </div>}
 
                 { milTime===false && <div className='bg-[#000000]'>
-                    <h1 className='text-[#ffffff] lg: text-9xl'>{time.toLocaleTimeString([],
+                    <h1 className='text-[#ffffff] text-6xl lg:text-9xl'>{time.toLocaleTimeString([],
                         {hour: "2-digit", minute: "2-digit", second: "2-digit", hour12: true}).toUpperCase()}
                     </h1>
                 </div> }
 
                 <button key={animationKey}
-                  className={`text-white text-3xl border-none focus:outline-none
+                  className={`text-white text-3xl lg:text-5xl border-none focus:outline-none
                     ${isIdle? "animate-disappear-bottom": "animate-appear-bottom"}`}
                 onClick={()=>setmilTime(!milTime)}>{milTime? "12 Hour": "24 Hour"}</button>
 

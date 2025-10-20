@@ -27,17 +27,20 @@ function Analog(){
                         <h2 className="text-white text-4xl">ClOCK</h2>
                     </div> */}
             {/*Clock face */}
-            <div className=' relative h-140 w-140 border-white border-5 rounded-full'>
+            <div className=' relative h-70 w-70 lg:h-140 lg:w-140 border-white border-5 rounded-full'>
                 {/*Hour hand */}
-                <div className='absolute top-1/2 left-1/2 origin-bottom w-2 h-35 bg-white rounded' 
+                <div className='absolute top-1/2 left-1/2 origin-bottom  w-1 h-17 
+                lg:w-2 lg:h-35 bg-white rounded' 
                 style={{transform: `translate(-50%, -100%) rotate(${angles.hrs}deg)`}}></div>
 
                 {/*Minute hand */}
-                <div className='absolute top-1/2 left-1/2 w-1 origin-bottom h-50 bg-white rounded'
+                <div className='absolute top-1/2 left-1/2 lg:w-1 lg:h-50 w-1 h-25
+                origin-bottom bg-white rounded'
                 style={{transform: `translate(-50%, -100%) rotate(${angles.mins}deg)`}}></div>
 
                 {/*Second Hand */}
-                <div className='absolute top-1/2 left-1/2 w-0.5 origin-bottom h-60 bg-red-500'
+                <div className='absolute top-1/2 left-1/2 w-0.5 h-30 lg:w-0.5 lg:h-60
+                origin-bottom bg-red-500'
                 style={{transform: `translate(-50%, -100%) rotate(${angles.secs}deg)`}}></div>
             </div>
         </div>

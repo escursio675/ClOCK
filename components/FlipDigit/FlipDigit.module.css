@@ -24,6 +24,15 @@
     gap: 20px;
     width: calc(3 * 180px + 280px);
   }
+
+  @media (orientation:portrait){
+    .flipClock{
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      width: calc(3 * 90px + 35px);
+    }
+  }
   
   .flipUnitContainer {
     display: block;

@@ -40,7 +40,7 @@ function BgSelect() {
 
   return (
     <div
-      className="h-screen w-screen flex items-center justify-center pt-40"
+      className="h-screen w-screen flex items-center justify-center pt-40 landscape:pt-20"
       style={{
         backgroundImage: background ? `url(${background})` : "none",
         backgroundColor: background ? "transparent" : "black",
@@ -48,13 +48,13 @@ function BgSelect() {
         backgroundPosition: "center",
       }}
     >
-      <div className="flex justify-center items-center flex-col gap-25">
+      <div className="flex justify-center items-center flex-col landscape:gap-12 gap-25">
         {milTime ? (
-          <div className={`${darkText ? "text-black" : "text-white"} text-9xl`}>
+          <div className={`${darkText ? "text-black" : "text-white"} text-6xl lg:text-9xl`}>
             {time.toLocaleTimeString()}
           </div>
         ) : (
-          <div className={`${darkText ? "text-black" : "text-white"} text-9xl`}>
+          <div className={`${darkText ? "text-black" : "text-white"} text-6xl lg:text-9xl`}>
             {time
               .toLocaleTimeString([], {
                 hour: "2-digit",
@@ -66,9 +66,9 @@ function BgSelect() {
           </div>
         )}
 
-        <div className="flex flex-col gap-12 items-center justify-center text-2xl">
+        <div className="flex flex-col gap-12 items-center justify-center text-xl lg:text-2xl">
           <button
-            className={`${darkText ? "text-black" : "text-white"} text-3xl 
+            className={`${darkText ? "text-black" : "text-white"} lg:text-3xl text-2xl 
               border-none focus:outline-none
               ${isIdle ? "animate-disappear-bottom" : "animate-appear-bottom"}`}
             onClick={() => setmilTime(!milTime)}
@@ -76,7 +76,7 @@ function BgSelect() {
             {milTime ? "12 Hour" : "24 Hour"}
           </button>
 
-          <div className="focus:outline-none bg-transparent rounded-lg">
+          <div className="focus:outline-none bg-transparent rounded-lg portrait:pl-40">
             <input
               ref={inputRef}
               className={`${darkText ? "text-black" : "text-white"}`}
@@ -86,7 +86,7 @@ function BgSelect() {
             />
 
             <button
-              className={`${darkText ? "text-black" : "text-white"} focus:outline-none
+              className={`${darkText ? "text-black" : "text-white"} portrait:pt-10 focus:outline-none
                 ${isIdle ? "animate-disappear-bottom" : "animate-appear-bottom"}`}
               onClick={() => setdarkText(!darkText)}
             >
